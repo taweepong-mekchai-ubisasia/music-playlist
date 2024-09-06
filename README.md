@@ -1,19 +1,10 @@
-# music-playlist
+# Music Playlist Application
 
-## Project setup
-```
-npm install
-```
+## Project Overview
+A music playlist application built with Vue 3 for the front-end and Node.js/Express for the back-end with MySQL database.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Front-End Setup (Vue 3)
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+1. Navigate to the project directory:
+   ```bash
+   cd music-playlist-app

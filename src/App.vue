@@ -1,30 +1,26 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <div id="app">
+    <h1>Music Playlist App</h1>
+    <Search />
+    <Playlist />
+    <PlaylistManager />
+  </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+import Search from './components/Search.vue';
+import Playlist from './components/Playlist.vue';
+import PlaylistManager from './components/PlaylistManager.vue';
 
-nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
-</style>
+export default {
+  components: {
+    Search,
+    Playlist,
+    PlaylistManager,
+  },
+  mounted() {
+    this.$store.dispatch('fetchPlaylists');
+    this.$store.dispatch('fetchSongs');
+  },
+};
+</script>
